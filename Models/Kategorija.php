@@ -62,6 +62,7 @@ class Kategorija{
         try{
             $stmt = $db->prepare("DELETE FROM kategorije WHERE id = ?");
             $stmt->bind_param("i",$id);
+            $_SESSION["poruka"]="Kategorija uspješno izbrisana!";
             return $stmt->execute();
         }
         catch(mysqli_sql_exception $e){
