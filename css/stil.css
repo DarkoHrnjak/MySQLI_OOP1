@@ -28,6 +28,10 @@ nav a:hover {
 .greska{
     color: red;
 }
+
+.uspjeh{
+    color: green;
+}
 /* Naslovi */
 h2 {
     margin-bottom: 10px;
@@ -91,7 +95,7 @@ input[type="text"],
 input[type="number"],
 input[type="date"],
 select {
-    width: 100%;
+    width: 70%;
     padding: 8px;
     margin-bottom: 12px;
     border: 1px solid #bbb;
@@ -122,3 +126,13 @@ input[type="submit"]:hover {
     width: 100%;
     /* position: fixed; */
 }
+
+.nova{
+    padding: 5px;
+    border: 1px solid #a7a0a0;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 12px;
+} 

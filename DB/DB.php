@@ -11,7 +11,7 @@ class DB{
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         try{
-            $this->conn = new mysqli("localhost","web01","MyN3wStrongP@ss!","WebTrgovina");
+            $this->conn = new mysqli("localhost","root","MyN3wStrongP@ss!","WebTrgovina");
             $this->conn->set_charset("utf8");
             //echo "Konekcija uspješna";
         }
@@ -23,6 +23,12 @@ class DB{
 
     public static function getInstance(): DB{
         return self::$instance ??= new DB();
+    }
+
+    public function __destruct(){
+        if($this->conn){
+            $this->conn->close();
+        }
     }
 }
 
