@@ -22,7 +22,7 @@ else
 ?>
 
 <form action="" method="POST">
-    <input type="hidden" name="id" value=""<?= $idkat  ?>>
+    <input type="hidden" name="id" value="<?= $idkat ?>">
     <label>Naziv:</label>
     <input type="text" name="naziv" value="<?= $kategorija ? $kategorija["naziv"] : "" ?>">
     <button type="submit">Spremi</button>
@@ -30,9 +30,9 @@ else
 
 <?php
 if($_POST){
-    if($_POST["id"==0]){
+    if($_POST["id"]==0){
         Kategorija::insert($_POST["naziv"]);
-        echo "<p style='color:green;'>Jategorija spremljen</p>";
+        echo "<p style='color:green;'>Kategorija spremljena</p>";
     }
     else
     {
@@ -40,7 +40,7 @@ if($_POST){
         Kategorija::update($_POST["id"],$_POST["naziv"]);
         echo "<p style='color:green;'>Kategorija ažurirana</p>";
     }
-
+    
     header("refresh: 1; url=kategorije.php");
 }
 ?>

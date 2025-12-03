@@ -1,7 +1,6 @@
 <?php
-require_once __DIR__ ."/../header.php";
-require_once __DIR__ ."/../Models/Kategorija.php";
-
+require_once "../header.php";
+require_once "../Models/Kategorija.php";
 
 $kategorije = Kategorija::allCategories();
 ?>
@@ -27,7 +26,7 @@ $kategorije = Kategorija::allCategories();
             <td><?= $k["naziv"]; ?></td>
             <td>
                 <a href="adminkategorija.php?id=<?= $id ?>" class="action-btn">Uredi</a>
-                <a href="DeleteKategorija.php?id=<?= $id ?>" class="action-btn delete" onclick="return confirm('Da li zelite sigurno obrisati kategoriju <?= $k['naziv']?> ?'); ">Briši</a>
+                <a href="DeleteKategorija.php?id=<?= $id ?>" class="action-btn delete" onclick="return confirm('Da li želite sigurno obrisati kategoriju <?= $k['naziv'] ?> ?');">Briši</a>
             </td>
         </tr>
         <?php endforeach; ?>
