@@ -1,4 +1,5 @@
 <?php
+session_start();
 $base = str_replace(['\\','/'],DIRECTORY_SEPARATOR,$_SERVER["DOCUMENT_ROOT"]);//C:/xampp/www
 $path = str_replace(['\\','/'],DIRECTORY_SEPARATOR,__DIR__);
 
